@@ -1,12 +1,26 @@
 @charset "UTF-8";
 
+:root {
+	--dark-brown: #663418;
+	--dark-green: #6a7b6d;
+	--light-blue:#97abaf;
+	--light-brown: #946f62;
+	--light-gray: #d5d9dc;
+	--light-yellow: #afa48d;
+}
+
+@font-face {
+    font-family: 'varela-round';
+    src: url('assets/fonts/VarelaRound-Regular.ttf');
+}
+
 body {
   margin: 20px;
 }
 
 .header {
   color: #21243d;
-  font-family: Inconsolata, "Courier New", Courier, monospace;
+  font-family: "varela-round", Inconsolata, "Courier New", Courier, monospace;
   width: 65%;
   margin: 0 auto;
 }
@@ -37,6 +51,19 @@ body {
 
 .header .top > div {
 	display: flex;
+	justify-content: space-between;
+	min-width: 11%;
+	align-items: center;
+}
+
+.header .top > div > div {
+	display: flex;
+	user-select: none;
+	flex-direction: column;
+}
+
+.header .top > div > div span {
+	font-size: 16px;
 }
 
 .header span {
