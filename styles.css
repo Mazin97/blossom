@@ -14,6 +14,16 @@
     src: url('assets/fonts/VarelaRound-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('assets/fonts/Poppins-Bold.ttf');
+}
+
 body {
   margin: 20px;
 }
@@ -123,4 +133,81 @@ body {
 	margin: 0 3px !important;
 	padding: 7px;
 	background-color: #B9C698;
+}
+
+.contact-me {
+	background-color: #D9E1C5;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-me .title-container {
+	display: flex;
+	margin: 5% 15% 0;
+	flex-direction: column;
+}
+
+.contact-me .title {
+	vertical-align: baseline;
+	font-size: 3rem;
+	line-height: 1.2;
+	font-family: 'Poppins Bold',sans-serif;
+	font-weight: 700;
+	text-decoration: none;
+	font-style: normal;
+	letter-spacing: 0;
+	color: #141414;
+	text-transform: none;
+}
+
+.contact-me .subtitle {
+	color: #6a6a6a;
+	margin: 20px 0;
+	padding-bottom: 10px;
+	border-bottom:  1px solid #a19f9f;
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.contact-me .contact-ways-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 3% 15% 5%;
+}
+
+.contact-me .contact-ways-container > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-me .contact-ways-container .icon-container {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-me .contact-ways-container .icon-container img {
+	width: 40px;
+	height: 40px;
+}
+
+.contact-me .contact-ways-container span {
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	font-size: 14px;
+	font-weight: 700;
+	color: #6a6a6a;
+	margin: 25px 0;
+}
+
+.contact-me .contact-ways-container a {
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(20, 20, 20);
 }
