@@ -312,3 +312,40 @@ body {
 	width: 200px;
 	height: 200px;
 }
+
+.services-section {
+	display: flex;
+	flex-direction: row;
+	margin: 5% auto;
+	width: 70%;
+}
+
+.services-section > div {
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
+}
+
+.services-section > div * {
+	padding: 7px 0 4px 0;
+}
+
+.services-section > div img {
+	width: 50px;
+	height: 50px;
+}
+
+.services-section .title {
+	align-items: center;
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.services-section .text {
+	align-items: center;
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	font-weight: 500;
+	color: #6a6a6a;
+	font-size: .9rem;
+}
