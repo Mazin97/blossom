@@ -20,20 +20,50 @@
 }
 
 @font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Medium.ttf');
+	font-weight: medium;
+}
+
+@font-face {
     font-family: 'Poppins Bold';
     src: url('assets/fonts/Poppins-Bold.ttf');
 }
 
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Bold.ttf');
+	font-weight: bold;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-  margin: 20px;
+  margin: 0 !important;
 }
 
 .header {
   color: #21243d;
-  font-family: "varela-round", Inconsolata, "Courier New", Courier, monospace;
-  width: 65%;
+  font-family: "Montserrat", Inconsolata, "Courier New", Courier, monospace;
+  width: 100%;
   margin: 0 auto;
+  z-index: 999;
 }
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
 a {
     text-decoration: none;
@@ -55,7 +85,7 @@ a {
 }
 
 .header .top img {
-	width: 50px;
+	width: 100px;
 	height: auto;
 	background-color: transparent!important;
 	display: block;
@@ -77,16 +107,24 @@ a {
 }
 
 .header .top > div > div span {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .header span {
-	font-size: 13px;
-	color:#8c8c8c;
+	font-size: 16px;
+	color:black;
 }
 
 .header a {
 	color: #21243d;
+}
+
+.header .spaced {
+	font-size: 16px !important; 
+	padding-left: 20px;
+	font-weight: 300;
+	letter-spacing: 3px;
+
 }
 
 .header .contact {
@@ -113,9 +151,14 @@ a {
 	flex-direction: row;
 }
 
-.header .bottom ul li {
-	margin-right: 40px;
-}
+.header .bottom li {
+	border-right: 1px solid rgb(106, 106, 106);
+	padding: 5px 10px;
+  }
+  
+  .header .bottom li:last-child {
+	border-right: none;
+  }
 
 .header .bottom ul li a {
 	cursor: pointer;
@@ -131,12 +174,6 @@ a {
 
 .header .bottom ul li img {
 	width: 15px;
-}
-
-.links-list li {
-	margin: 0 3px !important;
-	padding: 7px;
-	background-color: #B9C698;
 }
 
 .contact-me {
@@ -390,7 +427,6 @@ a {
 
 .banner-button {
 	display: flex;
-	border: 2px solid black;
 	max-width: 200px;
 	justify-content: center;
 	min-height: 60px;
@@ -398,16 +434,19 @@ a {
 	margin: 20px 20px 20px 0;
 	cursor: pointer;
 	transition: all .4s ease;
+	border-radius: 50px;
+	background: var(--dark-green);
+	
 }
 
 .banner-button:hover {
-	background: #D9E1C5;
+	background: var(--light-yellow);
 }
 
 .banner-button a {
 	font-family: 'Poppins Bold',sans-serif;
 	font-weight: 400;
-	color: black;
+	color: white;
 	font-size: 1rem;
 	text-decoration: none;
 
@@ -471,3 +510,31 @@ a {
 .about-me-container .info-container .content span {
 	margin: 10px 0;
 }
+
+.board {
+    background: url('./assets/images/folhas.png');
+    height: 40vh; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+	background-size: cover; /* Adjust the background size as needed */
+    background-position: center; /* Center the image */
+}
+
+	.board .content {
+		display: flex;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 20px;
+		text-align: center;
+		margin: 0 30%;
+	}
+
+		.board .content span {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: medium;
+			color: black;
+			margin: 20px 0;
+			font-size: 18px;
+		}
