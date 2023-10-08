@@ -49,6 +49,10 @@ body {
   margin: 0 !important;
 }
 
+span {
+	user-select: none;
+}
+
 .header {
   color: #21243d;
   font-family: "Montserrat", Inconsolata, "Courier New", Courier, monospace;
@@ -356,39 +360,84 @@ a {
 
 .services-section {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin: 5% auto;
 	width: 70%;
 }
 
-.services-section > div {
+.services-section .title  {
+	display: flex;
+	align-items: flex-start !important;
+	margin-bottom: 50px;
+}
+
+	.services-section .title span {
+		font-family: 'Poppins Bold',sans-serif;
+		font-weight: 600;
+		font-size: 2.5rem;
+		border-bottom: 2px solid black;
+	}
+
+.service {
 	display: flex;
 	flex-direction: column;
+	margin: 20px;
+}
+
+	.service .service-title {
+		display: flex;
+		border-bottom: 2px solid black;
+		margin-left: 38px;
+		justify-content: flex-end;
+		padding-right: 15px;
+	}
+
+		.service .service-title span {
+			font-family: 'Poppins',sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: #21243d;
+		}
+
+	.service .img-container {
+		border-radius: 50%;
+		background-color: #21243d;
+		width: 80px;
+		height: 80px;
+		border: 2px solid black;
+		margin-top: -2px;
+		cursor: pointer;
+	}
+
+.service-content {
+	display: flex;
+}
+
+.service-content .services, .service-content .services-text {
+	width: 50%
+}
+
+.service-content .services-text {
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px;
 	padding: 0 20px;
 }
 
-.services-section > div * {
-	padding: 7px 0 4px 0;
+.service-content .services-text span {
+	font-family: 'Poppins',sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #21243d;
+	padding-bottom: 10px;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
 }
 
-.services-section > div img {
-	width: 50px;
-	height: 50px;
-}
-
-.services-section .title {
-	align-items: center;
-	font-family: Inconsolata, "Courier New", Courier, monospace;
-	font-weight: 600;
+#services-title {
+	color: black;
+	font-weight: bold;
 	font-size: 1.5rem;
-}
-
-.services-section .text {
-	align-items: center;
-	font-family: Inconsolata, "Courier New", Courier, monospace;
-	font-weight: 500;
-	color: #6a6a6a;
-	font-size: .9rem;
 }
 
 .banner-container {
@@ -464,12 +513,14 @@ a {
 	width: 50%;
 	justify-content: flex-end;
 	margin-right: 5%;
+
 }
 
 .about-me-container .images-container img {
 	max-width: 300px;
 	position: absolute;
 	margin-right: 50px;
+	border-radius: 50%;
 }
 
 .about-me-container .images-container .background {
@@ -479,6 +530,7 @@ a {
 	background: #D9E1C5;
 	position: relative;
 	margin-top: 50px;
+	border-radius: 25px;
 }
 
 .about-me-container .info-container {
@@ -490,10 +542,10 @@ a {
 .about-me-container .info-container > div {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 70%;
 }
 
-.about-me-container .info-container .sub-title {
+.info-container .sub-title {
 	font-family: 'Poppins Bold',sans-serif;
 	font-weight: 400;
 	color: black;
@@ -507,8 +559,8 @@ a {
 	font-size: 1rem;
 }
 
-.about-me-container .info-container .content span {
-	margin: 10px 0;
+.info-container .content span {
+	margin: 5px 0;
 }
 
 .board {
@@ -538,3 +590,8 @@ a {
 			margin: 20px 0;
 			font-size: 18px;
 		}
+
+.fade {
+	opacity: 1 !important;
+	transition: all 0.5s ease-in-out;
+}
