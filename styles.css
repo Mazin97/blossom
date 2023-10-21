@@ -587,3 +587,43 @@ a {
 	opacity: 1 !important;
 	transition: all 0.5s ease-in-out;
 }
+
+.timeline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 150px 0;
+}
+
+.timeline .title {
+	margin-bottom: 50px;
+}
+
+.timeline-topics {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80%;
+}
+
+.topic-circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #6a6a6a;
+	margin: -10px auto 0 auto;
+}
+
+.topic {
+	font-family: 'varela-round';
+	font-weight: bold;
+	font-size: 1rem;
+	opacity: 0;
+}
+
+.dotted-line {
+	border-top: 4px dotted #6a6a6a; /* 1px width, dotted style, and black color */
+	width: 85%; 
+	height: 0;
+  }
