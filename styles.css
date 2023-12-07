@@ -767,3 +767,15 @@ a {
 		margin: 3% 0;
 	}
 }
+
+@media screen and (max-width: 375px) {
+	.instagram-featured .featured-container {
+		flex-direction: column;
+		align-items: center;
+		margin: 5% 0;
+	}
+
+	.header .top img {
+		display: none;
+	}
+}
